@@ -51,31 +51,59 @@ public class JCheckBoxAndJRadioButton extends JFrame {
         panel.add(sonsJCheckBox);
         panel.add(textfield);
         add(panel);
+        MaleJRadioButton.addItemListener(new HandlerRadioButton("men"));
+        FemaleJRadioButton.addItemListener(new HandlerRadioButton("women"));
+        //HandlerCheckBox handlerChechBox = new HandlerCheckBox();
+        //DaughtersJCheckBox.addItemListener(handlerChechBox);
+        //sonsJCheckBox.addItemListener(handlerChechBox);
 
-        HandlerCheckBox handlerChechBox = new HandlerCheckBox();
-        DaughtersJCheckBox.addItemListener(handlerChechBox);
-        sonsJCheckBox.addItemListener(handlerChechBox);
+    }
+
+    private class HandlerRadioButton implements ItemListener {
+
+        public String genero;
+
+        public HandlerRadioButton(String genero) {
+            this.genero = genero;
+        }
+
+        @Override
+        public void itemStateChanged(ItemEvent event) {
+            textfield.setText("You are a " + genero);
+            String frase = "You are a " + genero;
+            HandlerCheckBox handlerChechBox = new HandlerCheckBox(frase);
+            DaughtersJCheckBox.addItemListener(handlerChechBox);
+            sonsJCheckBox.addItemListener(handlerChechBox);
+
+        }
+
     }
 
     private class HandlerCheckBox implements ItemListener {
 
         private boolean valDaughters = false;
         private boolean valSons = false;
+        private String frase;
+
+        public HandlerCheckBox(String frase) {
+            this.frase = frase;
+        }
 
         public void itemStateChanged(ItemEvent event) {
             if (event.getSource() == DaughtersJCheckBox) {
-                valDaughters = DaughtersJCheckBox.isSelected() ? true : false;
+                valDaughters = DaughtersJCheckBox.isSelected() ? Boolean.TRUE : Boolean.FALSE;
             }
             if (event.getSource() == sonsJCheckBox) {
-                valSons = sonsJCheckBox.isSelected() ? true : false;
+                valSons = sonsJCheckBox.isSelected() ? Boolean.TRUE : Boolean.FALSE;
             }
-
             if (valDaughters == true && valSons == true) {
-                textfield.setText("You are " + " and you have 2 childrens");
+                textfield.setText(frase + " and you have 2 childrens");
             } else if (valDaughters == true) {
-                textfield.setText("You are " + " and you have 1 daughter");
+                textfield.setText(frase + " and you have 1 daughter");
             } else if (valSons == true) {
-                textfield.setText("You are " + " and you have 1 son");
+                textfield.setText(frase + " and you have 1 son");
+            } else {
+                textfield.setText(frase);
             }
         }
     }
