@@ -53,9 +53,6 @@ public class JCheckBoxAndJRadioButton extends JFrame {
         add(panel);
         MaleJRadioButton.addItemListener(new HandlerRadioButton("men"));
         FemaleJRadioButton.addItemListener(new HandlerRadioButton("women"));
-        //HandlerCheckBox handlerChechBox = new HandlerCheckBox();
-        //DaughtersJCheckBox.addItemListener(handlerChechBox);
-        //sonsJCheckBox.addItemListener(handlerChechBox);
 
     }
 
