@@ -8,6 +8,7 @@ package series;
 import model.access;
 import model.listShow;
 import model.show;
+import view.frame;
 
 /**
  *
@@ -19,6 +20,8 @@ public class Series {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        frame f = new frame();
+        f.setVisible(true);
         // TODO code application logic here
         //PRUEBA ESCRIBIR EN FICHERO
         /*
@@ -35,7 +38,7 @@ public class Series {
         access.saveLS(ls);
         
         System.out.println("saved series");
-         */
+         
 
         //PRUEBA LEER FICHERO
         //Instantiate a list os series:
@@ -52,6 +55,7 @@ public class Series {
         sh = ls.getShow(1);
         System.out.print("title: ");
         System.out.println(sh.getTitle());
+         */
 
     }
 
