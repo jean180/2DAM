@@ -31,4 +31,12 @@ public class listShow implements Serializable {
     public int longitud() {
         return seriesList.size();
     }
+
+    public void removeShow(int position) {
+        seriesList.remove(position);
+    }
+
+    public void updateShow(show s, int posicion) {
+        seriesList.set(posicion, s);
+    }
 }

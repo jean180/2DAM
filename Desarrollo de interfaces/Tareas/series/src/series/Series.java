@@ -5,6 +5,7 @@
  */
 package series;
 
+import controller.controller;
 import model.access;
 import model.listShow;
 import model.show;
@@ -20,11 +21,15 @@ public class Series {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        frame f = new frame();
+        //instancio un controlador para pasarselo a al vista
+        controller control = new controller();
+        frame f = new frame(control);
         f.setVisible(true);
+
+        /*
         // TODO code application logic here
         //PRUEBA ESCRIBIR EN FICHERO
-        /*
+
         //Create an instance of one serie:
         show sh = new show("Breaking Bad", "Vicent Guilligan", 5, "Drama", 5);
         //Create a list:
@@ -36,10 +41,10 @@ public class Series {
         ls.setShow(sh);
         //save it in a file
         access.saveLS(ls);
-        
-        System.out.println("saved series");
-         
 
+        System.out.println("saved series");
+
+        
         //PRUEBA LEER FICHERO
         //Instantiate a list os series:
         listShow ls = new listShow();
@@ -56,7 +61,6 @@ public class Series {
         System.out.print("title: ");
         System.out.println(sh.getTitle());
          */
-
     }
 
 }
