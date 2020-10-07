@@ -564,7 +564,7 @@
     <string name="escribe">Escribe</string>
     <string name="pulsar">Pulsar</string>
     <string name="pulsarvolver">Pulsar</string>
-    <string name="saludo">Holamundo2</string>
+    <string name="saludo">Escribe tu nombre</string>
     <string name="saludoRecoger">Holamundo2 de nuevo</string>
     <string name="search_menu_title">Search</string>
     <string name="status_bar_notification_info_overflow">999+</string>

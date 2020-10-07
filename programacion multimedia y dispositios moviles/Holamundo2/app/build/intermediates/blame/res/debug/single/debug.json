@@ -1,11 +1,11 @@
 [
     {
-        "merged": "/home/jeaagu/AndroidStudioProjects/Holamundo2/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher_background.png.flat",
-        "source": "/home/jeaagu/AndroidStudioProjects/Holamundo2/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_launcher_background.png"
-    },
-    {
         "merged": "/home/jeaagu/AndroidStudioProjects/Holamundo2/app/build/intermediates/res/merged/debug/drawable-v24_ic_launcher_foreground.xml.flat",
         "source": "/home/jeaagu/AndroidStudioProjects/Holamundo2/app/src/main/res/drawable-v24/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/home/jeaagu/AndroidStudioProjects/Holamundo2/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "/home/jeaagu/AndroidStudioProjects/Holamundo2/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_launcher_background.png"
     },
     {
         "merged": "/home/jeaagu/AndroidStudioProjects/Holamundo2/app/build/intermediates/res/merged/debug/layout_activity_pantalla2.xml.flat",
