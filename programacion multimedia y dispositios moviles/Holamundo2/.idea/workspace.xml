@@ -40,7 +40,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HolaMundo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Sumar" />
   </component>
   <component name="RecentsManager">
     <key name="android.template.-414740900">
@@ -128,10 +128,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="1188" y="414" width="494" height="290" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.27.1920.1053@0.27.1920.1053" timestamp="1602051280442" />
-    <state x="1223" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1602051460265">
+    <state x="1223" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1602054783129">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="1223" y="310" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1602051460265" />
+    <state x="1223" y="310" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1602054783129" />
     <state x="732" y="332" width="446" height="440" key="chooseDestDirectoryDialog" timestamp="1601879643563">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
