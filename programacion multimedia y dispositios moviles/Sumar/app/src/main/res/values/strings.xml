@@ -5,4 +5,5 @@
     <string name="numero1">Numero 1</string>
     <string name="numero2">Numero 2</string>
     <string name="boton">Calcular</string>
+    <string name="botonVolver">Volver</string>
 </resources>

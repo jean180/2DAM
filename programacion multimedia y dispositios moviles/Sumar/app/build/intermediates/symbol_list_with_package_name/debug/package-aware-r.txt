@@ -489,6 +489,7 @@ attr windowNoTitle
 bool abc_action_bar_embed_tabs
 bool abc_allow_stacked_button_bar
 bool abc_config_actionMenuItemAllCaps
+color BG
 color abc_background_cache_hint_selector_material_dark
 color abc_background_cache_hint_selector_material_light
 color abc_btn_colored_borderless_text_material
@@ -887,6 +888,7 @@ id baseline
 id beginOnFirstDraw
 id beginning
 id blocking
+id botonVolver
 id bottom
 id bounce
 id buttonPanel
@@ -1101,6 +1103,7 @@ layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_main
+layout activity_pantalla_resultado
 layout custom_dialog
 layout notification_action
 layout notification_action_tombstone
@@ -1143,6 +1146,7 @@ string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string app_name
 string boton
+string botonVolver
 string introduccion
 string numero1
 string numero2

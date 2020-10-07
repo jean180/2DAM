@@ -29,11 +29,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/miBtn"
         android:text="@string/boton"/>
-    <EditText
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/resultado"
-        android:text="@string/resultado"/>
+
 
     <ImageView
         android:layout_width="wrap_content"
