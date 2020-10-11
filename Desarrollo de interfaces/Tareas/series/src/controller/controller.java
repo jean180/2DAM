@@ -62,7 +62,6 @@ public class controller {
     }
 
     public void update(show s) {
-        //ls.updateShow(s, position);
-        System.out.println("prueba actualizacion");
+        ls.updateShow(s, position);
     }
 }
