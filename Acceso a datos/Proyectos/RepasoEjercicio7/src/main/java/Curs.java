@@ -9,6 +9,7 @@
  * @author jean_
  */
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Curs {
 
@@ -30,8 +31,39 @@ public class Curs {
         listaAlumnos.add(NuevoAlumno);
     }
 
-    public void removeAlumno() {
+    public void removeAlumno(int index, String nombre) {
+        Alumne alumnoAux = findAlumno(index, nombre);
+        Iterator<Alumne> it = listaAlumnos.iterator();
+        int contador = 0;
+        while (it.hasNext()) {
+            Alumne next = it.next();
+            if (alumnoAux == next) {
+                listaAlumnos.remove(next);
+            }
+        }
+    }
 
+    public Alumne findAlumno(int index, String nombre) {
+        Iterator<Alumne> it = listaAlumnos.iterator();
+        int contador = 0;
+        while (it.hasNext()) {
+            contador++;
+            Alumne alumnoAux = it.next();
+            if (index <= 0 && nombre == alumnoAux.getNom()) {
+                return alumnoAux;
+            } else if (index == contador) {
+                return alumnoAux;
+            }
+        }
+        return null;
+    }
+
+    public void listarAlumnos() {
+        Iterator<Alumne> it = listaAlumnos.iterator();
+        while (it.hasNext()) {
+            Alumne next = it.next();
+            System.out.println(next.toString());
+        }
     }
 
 }

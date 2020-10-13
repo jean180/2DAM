@@ -40,6 +40,7 @@ public class Ejer7 {
                     break;
 
                 case 4:
+                    opcion4(curso);
                     break;
 
                 case 5:
@@ -94,12 +95,17 @@ public class Ejer7 {
             posicion = Integer.parseInt(Split[0]);
             try {
                 nombre = Split[1];
-                System.out.println("Si hay posicion");
+                curso.removeAlumno(0, nombre);
             } catch (Exception e) {
-                System.out.println("No hay posicion");
+                curso.removeAlumno(posicion, null);
             }
         } catch (Exception e) {
-            System.out.println("no es un numero");
+            nombre = Split[0];
+            curso.removeAlumno(0, nombre);
         }
+    }
+
+    public static void opcion4(Curs curso) {
+        curso.listarAlumnos();
     }
 }

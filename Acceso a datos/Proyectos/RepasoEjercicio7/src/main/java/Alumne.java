@@ -60,4 +60,11 @@ public class Alumne {
         this.notaNum = notaNum;
     }
 
+    @Override
+    public String toString() {
+        return "Alumne{" + "nom=" + nom + ", Cognoms=" + Cognoms + ", DNI=" + DNI + ", notaLetra=" + notaLetra + ", notaNum=" + notaNum + '}';
+    }
+    
+    
+
 }
