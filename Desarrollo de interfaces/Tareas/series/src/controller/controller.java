@@ -63,5 +63,7 @@ public class controller {
 
     public void update(show s) {
         ls.updateShow(s, position);
+        acc.saveLS(ls);
+
     }
 }

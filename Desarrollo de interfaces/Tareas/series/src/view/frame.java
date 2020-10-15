@@ -12,6 +12,7 @@ import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
+import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
@@ -30,6 +31,8 @@ public class frame extends JFrame {
     private JButton b1, b2, b3, b4, b5, b6, b7;
     private JLabel e1, e2, e3, e4, e5, e6;
     private JTextField t1, t2, t3, t4, t5, t6;
+    private JComboBox combo;
+    private String[] plataformas = {"none", "Netflix", "HBO", "Amazon Video", "Rakuten"};
 
     //we need an object for the controller
     private controller c = null;
@@ -42,7 +45,7 @@ public class frame extends JFrame {
         setDefaultCloseOperation(EXIT_ON_CLOSE);
 
         panel1.setLayout(new BorderLayout());
-        panel2.setLayout(new GridLayout(5, 2, 10, 10));
+        panel2.setLayout(new GridLayout(6, 2, 10, 10));
         panel3.setLayout(new FlowLayout());
         add(panel1);
         panel1.add(panel3, BorderLayout.NORTH);
@@ -81,12 +84,16 @@ public class frame extends JFrame {
         t5 = new JTextField(50);
         panel2.add(e5);
         panel2.add(t5);
+        e6 = new JLabel("Platform");
+        panel2.add(e6);
+        combo = new JComboBox(plataformas);
+        panel2.add(combo);
+        combo.setEnabled(false);
         t1.setEditable(false);
         t2.setEditable(false);
         t3.setEditable(false);
         t4.setEditable(false);
         t5.setEditable(false);
-        //t6.setEditable(false);
 
         buttonsListener bl = new buttonsListener();
         b1.addActionListener(bl);
@@ -134,6 +141,7 @@ public class frame extends JFrame {
                     t3.setEditable(true);
                     t4.setEditable(true);
                     t5.setEditable(true);
+                    combo.setEnabled(true);
 
                     b1.setEnabled(false);
                     b2.setEnabled(false);
@@ -156,6 +164,7 @@ public class frame extends JFrame {
                     t3.setEditable(false);
                     t4.setEditable(false);
                     t5.setEditable(false);
+                    combo.setEnabled(false);
 
                     //cambiar texto de b5
                     b5.setText("+");
@@ -185,11 +194,14 @@ public class frame extends JFrame {
                     t5.setEditable(true);
 
                     b1.setEnabled(false);
+
                     b2.setEnabled(false);
                     b3.setEnabled(false);
                     b4.setEnabled(false);
                     b6.setEnabled(false);
                     b5.setEnabled(false);
+                    combo.setEnabled(true);
+
                     //cambiar texto de b5
                     b7.setText("***");
                 } else {
@@ -200,6 +212,8 @@ public class frame extends JFrame {
                     b4.setEnabled(true);
                     b6.setEnabled(true);
                     b5.setEnabled(true);
+                    combo.setEnabled(false);
+
                     t1.setEditable(false);
                     t2.setEditable(false);
                     t3.setEditable(false);
@@ -219,7 +233,7 @@ public class frame extends JFrame {
     }
 
     private show fillshow() {
-        show s = new show(t1.getText(), t2.getText(), Integer.parseInt(t3.getText()), t4.getText(), Integer.parseInt(t5.getText()));
+        show s = new show(t1.getText(), t2.getText(), Integer.parseInt(t3.getText()), t4.getText(), Integer.parseInt(t5.getText()), plataformas[combo.getSelectedIndex()]);
         return s;
     }
 
@@ -229,5 +243,6 @@ public class frame extends JFrame {
         t3.setText(String.valueOf(s.getSeasons()));
         t4.setText(s.getGenre());
         t5.setText(String.valueOf(s.getViews()));
+        combo.setSelectedItem(s.getPlatform());
     }
 }

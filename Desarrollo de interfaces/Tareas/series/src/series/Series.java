@@ -31,13 +31,13 @@ public class Series {
         //PRUEBA ESCRIBIR EN FICHERO
 
         //Create an instance of one serie:
-        show sh = new show("Breaking Bad", "Vicent Guilligan", 5, "Drama", 5);
+        show sh = new show("Breaking Bad", "Vicent Guilligan", 5, "Drama", 5, "Netflix");
         //Create a list:
         listShow ls = new listShow();
         //add the serie:
         ls.setShow(sh);
         //create second serie:
-        sh = new show("Game of thrones", "David Beniodd", 6, "1", 6);
+        sh = new show("Game of thrones", "David Beniodd", 6, "1", 6, "HBO");
         ls.setShow(sh);
         //save it in a file
         access.saveLS(ls);
