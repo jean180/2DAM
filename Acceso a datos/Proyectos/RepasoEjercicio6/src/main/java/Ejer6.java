@@ -46,7 +46,7 @@ public class Ejer6 {
     public static float[][] opcion1(float[][] matriz) {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Indica proveedor 1-18");
-        int proveedor = teclado.nextInt() - 11;
+        int proveedor = teclado.nextInt() - 1;
         for (int i = 0; i < matriz.length; i++) {
             if (i == proveedor) {
                 for (int j = 0; j < matriz[0].length; j++) {
@@ -54,6 +54,8 @@ public class Ejer6 {
                         System.out.println("Ingresa el valor de las ventas");
                         float ingreso = teclado.nextFloat();
                         matriz[i][j] = ingreso;
+                        i = matriz.length;
+                        break;
                     }
                 }
             }
@@ -64,7 +66,7 @@ public class Ejer6 {
     public static void opcion2(float[][] matriz) {
         Scanner teclado = new Scanner(System.in);
         System.out.println("Indica proveedor");
-        int proveedor = teclado.nextInt();
+        int proveedor = teclado.nextInt() - 1;
         float suma = 0;
         for (int i = 0; i < matriz.length; i++) {
             if (i == proveedor) {

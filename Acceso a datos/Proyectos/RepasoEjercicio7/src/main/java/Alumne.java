@@ -18,6 +18,7 @@ public class Alumne {
         this.Cognoms = Cognoms;
         this.DNI = DNI;
         this.notaNum = notaNum;
+        this.notaLetra = notaLetra;
     }
 
     public String getNom() {
@@ -62,9 +63,7 @@ public class Alumne {
 
     @Override
     public String toString() {
-        return "Alumne{" + "nom=" + nom + ", Cognoms=" + Cognoms + ", DNI=" + DNI + ", notaLetra=" + notaLetra + ", notaNum=" + notaNum + '}';
+        return " nom=" + nom + ", Cognoms=" + Cognoms + ", DNI=" + DNI + ", notaLetra=" + notaLetra + ", notaNum=" + notaNum + '}';
     }
-    
-    
 
 }

@@ -34,11 +34,10 @@ public class Curs {
     public void removeAlumno(int index, String nombre) {
         Alumne alumnoAux = findAlumno(index, nombre);
         Iterator<Alumne> it = listaAlumnos.iterator();
-        int contador = 0;
         while (it.hasNext()) {
             Alumne next = it.next();
             if (alumnoAux == next) {
-                listaAlumnos.remove(next);
+                it.remove();
             }
         }
     }
@@ -49,20 +48,24 @@ public class Curs {
         while (it.hasNext()) {
             contador++;
             Alumne alumnoAux = it.next();
-            if (index <= 0 && nombre == alumnoAux.getNom()) {
+            if (index == contador) {
                 return alumnoAux;
-            } else if (index == contador) {
+            } else if (index < 0 && alumnoAux.getNom().equalsIgnoreCase(nombre)) {
                 return alumnoAux;
             }
         }
+        System.out.println("No se ha encontrado al alumno");
         return null;
     }
 
     public void listarAlumnos() {
         Iterator<Alumne> it = listaAlumnos.iterator();
+        int contador = 1;
         while (it.hasNext()) {
             Alumne next = it.next();
+            System.out.print("Alumno nº: " + contador);
             System.out.println(next.toString());
+            contador++;
         }
     }
 
