@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
         chkBoxTeaching = (CheckBox) findViewById(R.id.chkBoxTeaching);
         chkBoxBlogging = (CheckBox) findViewById(R.id.chkBoxBlogging);
 
-        TextView txtHobby = (TextView)findViewById(R.id.txtHobby);
+        txtHobby = (TextView)findViewById(R.id.txtHobby);
         chkBoxCycling.setOnCheckedChangeListener(new myCheckBoxChangeClicker());
         chkBoxTeaching.setOnCheckedChangeListener(new myCheckBoxChangeClicker());
         chkBoxBlogging.setOnCheckedChangeListener(new myCheckBoxChangeClicker());
@@ -38,21 +38,22 @@ public class MainActivity extends AppCompatActivity {
     class myCheckBoxChangeClicker implements CheckBox.OnCheckedChangeListener {
         @Override
         public void onCheckedChanged(CompoundButton buttonView, boolean isChecked){
-            if (isChecked){
-                if (buttonView==chkBoxCycling){
-                    showTextNotification("Cycling");
+                String prueba = "";
+                if (chkBoxCycling.isChecked()){
+                    prueba += "Cycling ";
                 }
-                if (buttonView==chkBoxTeaching){
-                    showTextNotification("Teaching");
+                if (chkBoxTeaching.isChecked()){
+                    prueba += "Teaching ";
+                }if (chkBoxBlogging.isChecked()) {
+                    prueba += "Blogging ";
                 }
-                if (buttonView==chkBoxBlogging){
-                    showTextNotification("Blogging");
-                }
-            }
+                showTextNotification(prueba);
+
         }
     }
 
     public void showTextNotification(String msgToDisplay){
-        Toast.makeText(this, msgToDisplay, Toast.LENGTH_SHORT).show();
+        txtHobby.setText(msgToDisplay);
+        //Toast.makeText(this, msgToDisplay, Toast.LENGTH_SHORT).show();
     }
 }
