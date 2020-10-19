@@ -12,12 +12,6 @@
         android:id="@+id/miMensaje"
         android:text="@string/saludo"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/miVolver"
-        android:text="@string/volver"/>
-
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

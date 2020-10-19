@@ -18,13 +18,12 @@ public class Pantalla2 extends Activity {
         setContentView(R.layout.activity_pantalla2);
 
         final TextView otroSaludo = (TextView)findViewById(R.id.miMensaje);
-        final Button volverBtn = (Button)findViewById(R.id.miVolver);
         final ImageButton imgBtn = (ImageButton)findViewById(R.id.imgVolver);
 
         Bundle miBundleRecoger = getIntent().getExtras();
         otroSaludo.setText(miBundleRecoger.getString("TEXTO"));
         final String completarSaludo = miBundleRecoger.getString("TEXTO");
-        volverBtn.setOnClickListener(new View.OnClickListener(){
+        imgBtn.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v){
                 Intent vueltaIntent = new Intent();
                 Bundle vueltaBundle = new Bundle();
