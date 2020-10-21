@@ -45,9 +45,11 @@ public class Curs {
     public Alumne findAlumno(int index, String nombre) {
         Iterator<Alumne> it = listaAlumnos.iterator();
         int contador = 0;
+        boolean encontrado = false;
         while (it.hasNext()) {
             contador++;
             Alumne alumnoAux = it.next();
+<<<<<<< Updated upstream
             if (index == contador) {
                 return alumnoAux;
             } else if (index < 0 && alumnoAux.getNom().equalsIgnoreCase(nombre)) {
@@ -55,6 +57,20 @@ public class Curs {
             }
         }
         System.out.println("No se ha encontrado al alumno");
+=======
+
+            if (index <= 0 && nombre == alumnoAux.getNom()) {
+                encontrado = true;
+                return alumnoAux;
+            } else if (index == contador) {
+                encontrado = true;
+                return alumnoAux;
+            }
+        }
+        if (encontrado == false) {
+            System.out.println("Alumno no encontrado");
+        }
+>>>>>>> Stashed changes
         return null;
     }
 
