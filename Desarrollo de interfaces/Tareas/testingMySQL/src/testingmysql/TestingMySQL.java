@@ -5,6 +5,8 @@
  */
 package testingmysql;
 
+import ui.frame;
+
 /**
  *
  * @author jeaagu
@@ -16,6 +18,8 @@ public class TestingMySQL {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        frame f = new frame();
+        f.setVisible(true);
     }
     
 }

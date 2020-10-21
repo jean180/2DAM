@@ -19,8 +19,8 @@ public class ClientDAO {
         PreparedStatement stmt = null;
         ResultSet rs = null;
         try {
-            stmt = con.prepareStatement("SELECT * FROM clients WHERE id ⁼?");
-            stmt.setString(1, cli.getId());;
+            stmt = con.prepareStatement("SELECT * FROM clients WHERE id =?");
+            stmt.setString(1, cli.getId());
             rs = stmt.executeQuery();
             while (rs.next()) {
                 c = new client();
