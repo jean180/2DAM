@@ -1,0 +1,48 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package DAO;
+
+import java.sql.*;
+import java.util.*;
+
+/**
+ *
+ * @author jeaagu
+ */
+public class ClientDAO {
+    private void getClientRow(ResultSet rs, client cli) throws SQLException {
+        cli.setId(rs.getString("id"));
+        cli.setNotes(rs.getString("notes"));
+    }
+
+    public List<client> findAll(Connection con) throws Exception {
+        List<client> listClients = new ArrayList<>();
+        Statement st = null;
+        ResultSet rs = null;
+        try {
+            st = con.createStatement();
+            rs = st.executeQuery("Select * from clients");
+            client cli = null;
+            while (rs.next()) {
+                cli = new client();
+                getClientRow(rs, cli);
+                listClients.add(cli);
+            }
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+            throw new Exception("There was a problem searching the client" + ex.getMessage());
+
+        } finally {
+            if (rs != null) {
+                rs.close();//We close the result
+            }
+            if (st != null) {
+                st.close(); // We close the Statement
+            }
+        }
+        return listClients;
+    }
+}
