@@ -22,6 +22,6 @@ public class TestManejoPersonas {
 
         //insertando nuevo objeto de tipo persona
         Persona personaNueva = new Persona(22, "Alex", "Tinoco", "Alex@gmail.com");
-        personaDao.insertar(personaNueva);
+        //personaDao.insertar(personaNueva);
     }
 }
