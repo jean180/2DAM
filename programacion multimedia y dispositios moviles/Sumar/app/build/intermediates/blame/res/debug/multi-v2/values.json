@@ -1,25 +1,8 @@
 {
     "logs": [
         {
-            "outputFile": "/home/jeaagu/AndroidStudioProjects/Sumar/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/home/jeaagu/2DAM/programacion multimedia y dispositios moviles/Sumar/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
-                {
-                    "source": "/home/jeaagu/AndroidStudioProjects/Sumar/app/src/main/res/values/strings.xml",
-                    "from": {
-                        "startLines": "1,6,7,2,4,5,3",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "16,274,317,59,184,229,136",
-                        "endColumns": "42,42,46,76,44,44,47",
-                        "endOffsets": "54,312,359,131,224,269,179"
-                    },
-                    "to": {
-                        "startLines": "563,564,565,566,567,568,569",
-                        "startColumns": "4,4,4,4,4,4,4",
-                        "startOffsets": "30608,30651,30694,30741,30818,30863,30908",
-                        "endColumns": "42,42,46,76,44,44,47",
-                        "endOffsets": "30646,30689,30736,30813,30858,30903,30951"
-                    }
-                },
                 {
                     "source": "/home/jeaagu/.gradle/caches/transforms-2/files-2.1/bf96d2b5a86ecd602a621e7e96856420/appcompat-1.2.0/res/values/values.xml",
                     "from": {
@@ -40,7 +23,24 @@
                     }
                 },
                 {
-                    "source": "/home/jeaagu/AndroidStudioProjects/Sumar/app/src/main/res/values/styles.xml",
+                    "source": "/home/jeaagu/2DAM/programacion multimedia y dispositios moviles/Sumar/app/src/main/res/values/colors.xml",
+                    "from": {
+                        "startLines": "5,4,2,3",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "199,153,55,102",
+                        "endColumns": "36,45,46,50",
+                        "endOffsets": "231,194,97,148"
+                    },
+                    "to": {
+                        "startLines": "287,309,310,311",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "12514,14172,14218,14265",
+                        "endColumns": "36,45,46,50",
+                        "endOffsets": "12546,14213,14260,14311"
+                    }
+                },
+                {
+                    "source": "/home/jeaagu/2DAM/programacion multimedia y dispositios moviles/Sumar/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -56,23 +56,6 @@
                         "endLines": "582",
                         "endColumns": "12",
                         "endOffsets": "31836"
-                    }
-                },
-                {
-                    "source": "/home/jeaagu/AndroidStudioProjects/Sumar/app/src/main/res/values/colors.xml",
-                    "from": {
-                        "startLines": "5,4,2,3",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "199,153,55,102",
-                        "endColumns": "36,45,46,50",
-                        "endOffsets": "231,194,97,148"
-                    },
-                    "to": {
-                        "startLines": "287,309,310,311",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "12514,14172,14218,14265",
-                        "endColumns": "36,45,46,50",
-                        "endOffsets": "12546,14213,14260,14311"
                     }
                 },
                 {
@@ -111,6 +94,23 @@
                         "endLines": "295,296,334,335,434,435,436,437,438,439,440,450,451,452,453,454,455,456,457,458,459,460,461,462,463,464,473,474,475,476,477,478,479,480,481,482,483,484,485,486,487,488,489,490,491,492,493,494,495,496,497,498,499,500,501,502,503,504,505,506,507,513,514,519,520,521,522,523,524,525,526,527,528,529,535,571,1920,1924,1925,1929,1930,2074,2075,2797,2891,2923,2960,2967",
                         "endColumns": "71,87,68,62,69,67,71,69,60,73,72,60,60,61,63,61,60,67,99,59,65,72,68,56,51,61,71,75,64,58,58,59,59,59,59,59,59,59,59,59,59,58,59,59,59,59,59,59,59,59,59,59,58,59,59,58,58,58,58,58,58,34,34,54,62,54,57,56,49,60,56,33,34,34,69,70,116,12,109,12,128,71,66,24,24,24,24,24",
                         "endOffsets": "13119,13207,15733,15796,22584,22652,22724,22794,22855,22929,23002,23847,23908,23970,24034,24096,24157,24225,24325,24385,24451,24524,24593,24650,24702,24764,25289,25365,25430,25489,25548,25608,25668,25728,25788,25848,25908,25968,26028,26088,26148,26207,26267,26327,26387,26447,26507,26567,26627,26687,26747,26807,26866,26926,26986,27045,27104,27163,27222,27281,27340,27614,27649,27887,27950,28005,28063,28120,28170,28231,28288,28322,28357,28392,28737,31075,122078,122279,122389,122590,122719,134086,134153,173290,191516,193581,195341,195718"
+                    }
+                },
+                {
+                    "source": "/home/jeaagu/2DAM/programacion multimedia y dispositios moviles/Sumar/app/src/main/res/values/strings.xml",
+                    "from": {
+                        "startLines": "1,6,7,2,4,5,3",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "16,274,317,59,184,229,136",
+                        "endColumns": "42,42,46,76,44,44,47",
+                        "endOffsets": "54,312,359,131,224,269,179"
+                    },
+                    "to": {
+                        "startLines": "563,564,565,566,567,568,569",
+                        "startColumns": "4,4,4,4,4,4,4",
+                        "startOffsets": "30608,30651,30694,30741,30818,30863,30908",
+                        "endColumns": "42,42,46,76,44,44,47",
+                        "endOffsets": "30646,30689,30736,30813,30858,30903,30951"
                     }
                 },
                 {

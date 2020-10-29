@@ -7,47 +7,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13803b4a-98ed-475f-bd9b-a0e1ce528bfa" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/proguard-rules.pro" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/androidTest/java/com/example/widgets_basicos/ExampleInstrumentedTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/java/com/example/widgets_basicos/MainActivity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/drawable/ic_launcher_background.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/mipmap-hdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/mipmap-mdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/main/res/values/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/app/src/test/java/com/example/widgets_basicos/ExampleUnitTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Widgets_basicos/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/Proyectos/RepasoEjercicio5/target/classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/Proyectos/RepasoEjercicio5/target/test-classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/Proyectos/RepasoEjercicio6/target/classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Acceso a datos/Proyectos/RepasoEjercicio6/target/test-classes/.netbeans_automatic_build" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HolaMundo3/app/src/main/java/com/example/holamundo3/Pantalla2.java" beforeDir="false" afterPath="$PROJECT_DIR$/../HolaMundo3/app/src/main/java/com/example/holamundo3/Pantalla2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../HolaMundo3/app/src/main/res/layout/activity_pantalla2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../HolaMundo3/app/src/main/res/layout/activity_pantalla2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../MyListaSimple/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../MyListaSimple/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/app/app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
