@@ -3,18 +3,21 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package jcheckboxandjradiobutton;
-
-import javax.swing.JRadioButton;
+package radiobuttonsandcheckboxesprint;
 
 /**
  *
  * @author jeaagu
  */
-public class Window {
+public class RadioButtonsAndCheckBoxesPrint {
 
+    /**
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
-   
-
+        // TODO code application logic here
+        frame f = new frame();
+        f.setVisible(true);
     }
+
 }
