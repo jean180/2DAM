@@ -5,6 +5,8 @@
  */
 package jcheckboxandjradiobutton;
 
+import javax.swing.JRadioButton;
+
 /**
  *
  * @author jeaagu
@@ -12,7 +14,7 @@ package jcheckboxandjradiobutton;
 public class Window {
 
     public static void main(String[] args) {
-        JCheckBoxAndJRadioButton j = new JCheckBoxAndJRadioButton();
-        j.setVisible(true);
+   
+
     }
 }
