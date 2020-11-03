@@ -16,7 +16,10 @@ import domain.Persona;
  */
 public class PersonaDAO {
 
-    private static final String SQL_SELECT = "SELECT id_personas, Nombre, Apellidos, Email, Edad FROM personas";
+    private static final String SQL_SELECT = "SELECT id_persona, Nombre, Apellidos, Email, Edad FROM persona";
+    private static final String SQL_INSERT = "INSERT INTO persona (Nombre, Apellidos, Email, Edad) VALUES (?,?,?,?)";
+    private static final String SQL_UPDATE = "UPDATE persona SET Nombre = ?, Apellidos = ?, Email = ?, Edad = ? WHERE id_persona=?";
+    private static final String SQL_DELETE = "DELETE FROM persona WHERE id_persona=?";
 
     public List<Persona> seleccionar() throws SQLException {
         Connection conn = null;
@@ -46,5 +49,88 @@ public class PersonaDAO {
         }
         return personas;
 
+    }
+
+    public int insertar(Persona persona) {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        int registros = 0;
+        try {
+            conn = Conexion.getConnection();
+            stmt = conn.prepareStatement(SQL_INSERT);
+            stmt.setString(1, persona.getNombre());
+            stmt.setString(2, persona.getApellidos());
+            stmt.setString(3, persona.getEmail());
+            stmt.setInt(4, persona.getEdad());
+            registros = stmt.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
+        } finally {
+            try {
+                close(stmt);
+            } catch (SQLException e) {
+            }
+            try {
+                close(conn);
+            } catch (SQLException e) {
+                e.printStackTrace(System.out);
+            }
+        }
+        return registros;
+    }
+
+    public int actualizar(Persona persona) {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        int registros = 0;
+        try {
+            conn = Conexion.getConnection();
+            stmt = conn.prepareStatement(SQL_UPDATE);
+            stmt.setString(1, persona.getNombre());
+            stmt.setString(2, persona.getApellidos());
+            stmt.setString(3, persona.getEmail());
+            stmt.setInt(4, persona.getEdad());
+            stmt.setInt(5, persona.getId_Persona());
+            registros = stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
+        } finally {
+            try {
+                close(stmt);
+            } catch (SQLException e) {
+            }
+            try {
+                close(conn);
+            } catch (SQLException e) {
+                e.printStackTrace(System.out);
+            }
+        }
+        return registros;
+    }
+
+    public int borrar(Persona persona) {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        int registros = 0;
+        try {
+            conn = Conexion.getConnection();
+            stmt = conn.prepareStatement(SQL_DELETE);
+            stmt.setInt(1, persona.getId_Persona());
+            registros = stmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace(System.out);
+        } finally {
+            try {
+                close(stmt);
+            } catch (SQLException e) {
+            }
+            try {
+                close(conn);
+            } catch (SQLException e) {
+                e.printStackTrace(System.out);
+            }
+        }
+        return registros;
     }
 }

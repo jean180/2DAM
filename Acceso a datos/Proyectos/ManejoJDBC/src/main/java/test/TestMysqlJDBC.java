@@ -26,7 +26,7 @@ public class TestMysqlJDBC {
             //Class.forName("com.mysql.cj.jdbc.Driver");
             Connection conexion = DriverManager.getConnection(url, "root", "123456");
             Statement instruccion = conexion.createStatement();
-            String sql = "SELECT id_persona, Nombre, Apellidos, Email,Edad FROM persona";
+            String sql = "SELECT Id_persona, Nombre, Apellidos, Email,Edad FROM persona";
             ResultSet resultado = instruccion.executeQuery(sql);
             while (resultado.next()) {
                 System.out.println("------------------------");

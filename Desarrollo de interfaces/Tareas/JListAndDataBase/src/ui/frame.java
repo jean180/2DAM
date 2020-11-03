@@ -56,7 +56,7 @@ public class frame extends JFrame {
         Iterator<client> it = clients.iterator();
         while (it.hasNext()) {
             client next = it.next();
-            listModel1.addElement(client);
+            listModel1.addElement(next);
         }
         for (int i = 0; i < 10; i++) {
             listModel1.addElement("ID" + i);

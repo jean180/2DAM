@@ -16,7 +16,7 @@ public class Connection_DB {
     public Connection OpenConnection() throws Exception {
         Connection con = null; //Install a connection
         try {
-            String urlOdbc = "jdbc:mysql://localhost:3306/di?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+            String urlOdbc = "jdbc:mysql://localhost:3306/id?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
             // create connection. NOTE in my case MySql user -> root, password
             con = (java.sql.DriverManager.getConnection(urlOdbc, "root", "123456"));
             return con;

@@ -20,8 +20,20 @@ public class TestManejoPersonas {
         PersonaDAO personaDao = new PersonaDAO();
         List<Persona> personas = personaDao.seleccionar();
 
-        //insertando nuevo objeto de tipo persona
-        Persona personaNueva = new Persona(22, "Alex", "Tinoco", "Alex@gmail.com");
-        //personaDao.insertar(personaNueva);
+        /*insertando nuevo objeto de tipo persona
+        Persona personaNueva = new Persona(28, "Juan", "Rodriguez", "Juan@gmail.com");
+        personaDao.insertar(personaNueva);
+        
+        actualizando objeto de tipo persona 
+        Persona personaActualizar = new Persona(3, 28, "Juan", "Rodriguez Gimenez", "JuanR@gmail.com");
+        personaDao.actualizar(personaActualizar); 
+        
+        Borrando objeto de tipo persona
+        Persona personaBorrar = new Persona(2);
+        personaDao.borrar(personaBorrar);*/
+        personas.forEach(persona -> {
+            System.out.println("persona = " + persona);
+        });
+
     }
 }
