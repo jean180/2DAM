@@ -75,10 +75,7 @@ public class PersonaDAO {
 
         } finally {
             try {
-                close(stmt);
-            } catch (SQLException e) {
-            }
-            try {
+                Conexion.close(stmt);
                 if (this.conexionTransaccional == null) {
                     Conexion.close(conn);
                 }
@@ -89,9 +86,10 @@ public class PersonaDAO {
         return registros;
     }
 
-    public void actualizar(Persona persona) throws SQLException {
+    public int actualizar(Persona persona) throws SQLException {
         Connection conn = null;
         PreparedStatement stmt = null;
+        int registros = 0;
         try {
             conn = this.conexionTransaccional != null ? this.conexionTransaccional : Conexion.getConnection();
             stmt = conn.prepareStatement(SQL_UPDATE);
@@ -100,13 +98,19 @@ public class PersonaDAO {
             stmt.setString(3, persona.getEmail());
             stmt.setInt(4, persona.getEdad());
             stmt.setInt(5, persona.getId_Persona());
-            stmt.executeUpdate();
+            registros = stmt.executeUpdate();
         } finally {
-            Conexion.close(stmt);
-            if (this.conexionTransaccional == null) {
-                Conexion.close(conn);
+            try {
+                Conexion.close(stmt);
+                if (this.conexionTransaccional == null) {
+                    Conexion.close(conn);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace(System.out);
             }
+
         }
+        return registros;
     }
 
     public int borrar(Persona persona) throws SQLException {
@@ -119,9 +123,14 @@ public class PersonaDAO {
             stmt.setInt(1, persona.getId_Persona());
             registros = stmt.executeUpdate();
         } finally {
-            Conexion.close(stmt);
-            if (this.conexionTransaccional == null) {
-                Conexion.close(conn);
+            try {
+
+                Conexion.close(stmt);
+                if (this.conexionTransaccional == null) {
+                    Conexion.close(conn);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace(System.out);
             }
         }
         return registros;

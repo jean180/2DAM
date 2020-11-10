@@ -27,8 +27,8 @@ public class TestManejoPersonas {
             }
             PersonaDAO personaDAO = new PersonaDAO(conexion);
             Persona cambioPersona = new Persona();
-            cambioPersona.setId_Persona(11);
-            cambioPersona.setNombre("Karla Ivonne");
+            cambioPersona.setId_Persona(1);
+            cambioPersona.setNombre("Karla Ivonnesaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
             cambioPersona.setApellidos("Gomez");
             cambioPersona.setEmail("kgomez@gmail.com");
             cambioPersona.setEdad(23);
