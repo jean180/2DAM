@@ -1,0 +1,129 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package datos;
+
+import static datos.Conexion.*;
+import java.util.*;
+import java.sql.*;
+import domain.Persona;
+
+/**
+ *
+ * @author jeaagu
+ */
+public class PersonaDAO {
+
+    private static final String SQL_SELECT = "SELECT id_persona, Nombre, Apellidos, Email, Edad FROM persona";
+    private static final String SQL_INSERT = "INSERT INTO persona (Nombre, Apellidos, Email, Edad) VALUES (?,?,?,?)";
+    private static final String SQL_UPDATE = "UPDATE persona SET Nombre = ?, Apellidos = ?, Email = ?, Edad = ? WHERE id_persona=?";
+    private static final String SQL_DELETE = "DELETE FROM persona WHERE id_persona=?";
+    private Connection conexionTransaccional;
+
+    public PersonaDAO() {
+
+    }
+
+    public PersonaDAO(Connection conexionTransaccional) {
+        this.conexionTransaccional = conexionTransaccional;
+    }
+
+    public List<Persona> seleccionar() throws SQLException {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        ResultSet rs = null;
+        Persona persona = null;
+        List<Persona> personas = new ArrayList<>();
+        try {
+            conn = this.conexionTransaccional != null ? this.conexionTransaccional : Conexion.getConnection();
+            stmt = conn.prepareStatement(SQL_SELECT);
+            rs = stmt.executeQuery();
+            while (rs.next()) {
+                int idPersona = rs.getInt("id_persona");
+                String nombre = rs.getString("Nombre");
+                String apellidos = rs.getString("Apellidos");
+                String email = rs.getString("Email");
+                int edad = rs.getInt("Edad");
+                persona = new Persona(idPersona, edad, nombre, apellidos, email);
+                personas.add(persona);
+            }
+        } finally {
+            Conexion.close(rs);
+            Conexion.close(stmt);
+            if (this.conexionTransaccional == null) {
+                Conexion.close(conn);
+            }
+        }
+        return personas;
+
+    }
+
+    public int insertar(Persona persona) throws SQLException {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        int registros = 0;
+        try {
+            conn = this.conexionTransaccional != null ? this.conexionTransaccional : Conexion.getConnection();
+            stmt = conn.prepareStatement(SQL_INSERT);
+            stmt.setString(1, persona.getNombre());
+            stmt.setString(2, persona.getApellidos());
+            stmt.setString(3, persona.getEmail());
+            stmt.setInt(4, persona.getEdad());
+            registros = stmt.executeUpdate();
+
+        } finally {
+            try {
+                close(stmt);
+            } catch (SQLException e) {
+            }
+            try {
+                if (this.conexionTransaccional == null) {
+                    Conexion.close(conn);
+                }
+            } catch (SQLException e) {
+                e.printStackTrace(System.out);
+            }
+        }
+        return registros;
+    }
+
+    public void actualizar(Persona persona) throws SQLException {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        try {
+            conn = this.conexionTransaccional != null ? this.conexionTransaccional : Conexion.getConnection();
+            stmt = conn.prepareStatement(SQL_UPDATE);
+            stmt.setString(1, persona.getNombre());
+            stmt.setString(2, persona.getApellidos());
+            stmt.setString(3, persona.getEmail());
+            stmt.setInt(4, persona.getEdad());
+            stmt.setInt(5, persona.getId_Persona());
+            stmt.executeUpdate();
+        } finally {
+            Conexion.close(stmt);
+            if (this.conexionTransaccional == null) {
+                Conexion.close(conn);
+            }
+        }
+    }
+
+    public int borrar(Persona persona) throws SQLException {
+        Connection conn = null;
+        PreparedStatement stmt = null;
+        int registros = 0;
+        try {
+            conn = this.conexionTransaccional != null ? this.conexionTransaccional : Conexion.getConnection();
+            stmt = conn.prepareStatement(SQL_DELETE);
+            stmt.setInt(1, persona.getId_Persona());
+            registros = stmt.executeUpdate();
+        } finally {
+            Conexion.close(stmt);
+            if (this.conexionTransaccional == null) {
+                Conexion.close(conn);
+            }
+        }
+        return registros;
+    }
+}
