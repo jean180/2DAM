@@ -6,6 +6,7 @@
 package view;
 
 import java.awt.BorderLayout;
+import java.awt.FlowLayout;
 import java.awt.GridBagConstraints;
 import java.awt.GridBagLayout;
 import javax.swing.*;
@@ -18,7 +19,6 @@ import javax.swing.table.DefaultTableModel;
 public class frame extends JFrame {
 
     JPanel panel1 = new JPanel();
-    JPanel panelTabla = new JPanel();
     JPanel panelBtns = new JPanel();
     JButton btnAdd, btnRm, btnUpdate;
     JTable jTable1 = new JTable();
@@ -41,20 +41,19 @@ public class frame extends JFrame {
         tags[6] = "MULTIJUGADOR";
         modelo.setColumnIdentifiers(tags);
         JScrollPane jScrollPane = new JScrollPane(jTable1);
-        panelTabla.add(jScrollPane);
-        panel1.add(panelTabla);
+        panel1.add(jScrollPane, BorderLayout.CENTER);
 
+        panelBtns.setLayout(new FlowLayout());
         btnAdd = new JButton("Añadir");
-
-        panel1.add(btnAdd);
+        panelBtns.add(btnAdd);
 
         btnUpdate = new JButton("Actualizar");
+        panelBtns.add(btnUpdate);
 
-        panel1.add(btnUpdate);
+        btnRm = new JButton("Eliminar");
+        panelBtns.add(btnRm);
 
-        btnRm = new JButton("Eliminiar");
-
-        panel1.add(btnRm);
+        panel1.add(panelBtns, BorderLayout.SOUTH);
         add(panel1);
     }
 }

@@ -1,4 +1,4 @@
-#Thu Oct 29 09:28:28 CET 2020
-base.0=/home/jeaagu/2DAM/programacion multimedia y dispositios moviles/Sumar/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Fri Nov 20 18:07:09 CET 2020
+base.0=A\:\\Personal\\2DAM\\2DAM\\programacion multimedia y dispositios moviles\\Sumar\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
