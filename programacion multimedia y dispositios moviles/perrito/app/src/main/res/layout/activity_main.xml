@@ -13,7 +13,7 @@
         android:id="@+id/show_pet_button"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"/>
-
+    
     <TextView
         android:id="@+id/autores"
         android:layout_width="wrap_content"
@@ -30,5 +30,4 @@
         android:id="@+id/opinion_text"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
-
 </RelativeLayout>

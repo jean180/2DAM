@@ -12,15 +12,13 @@ import android.widget.TextView;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity{
-
+public class MainActivity extends AppCompatActivity {
     public final static int OPTION_REQUEST_CODE = 1;
     public final static String EXTRA_NOMBRE = "org.instituserpis.ed.perrito.NOMBRE";
 
     private Button show_pet_button;
     private TextView page_link;
     private TextView opinion_text;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,7 +63,6 @@ public class MainActivity extends AppCompatActivity{
                 }
             }
         });
-
     }
 
     @Override

@@ -58,6 +58,5 @@ public class Visor extends AppCompatActivity {
                 finish();
             }
         });
-
     }
 }
