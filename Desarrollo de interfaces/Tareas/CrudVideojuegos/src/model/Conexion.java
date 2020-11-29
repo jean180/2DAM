@@ -13,11 +13,11 @@ import java.sql.*;
 
 public class Conexion {
 
-    public Connection OpenConnection() throws Exception {
+    public static Connection OpenConnection() throws Exception {
         Connection con = null; //Install a connection
         try {
-            String urlOdbc = "jdbc:mysql://localhost:3306/di?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
-            // create connection. NOTE in my case MySql user -> root, password
+            String urlOdbc = "jdbc:mysql://localhost:3306/id?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+            // create connection
             con = (java.sql.DriverManager.getConnection(urlOdbc, "root", "123456"));
             return con;
         } catch (Exception e) {//SQLException and classNotFoundException
@@ -26,7 +26,7 @@ public class Conexion {
         }
     }
 
-    public void CloseConnection(Connection con) throws Exception {
+    public static void CloseConnection(Connection con) throws Exception {
         try {
             if (con != null) {
                 con.close();

@@ -22,7 +22,7 @@
 DROP TABLE IF EXISTS `videojuegos`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
-CREATE TABLE `videojuegos` (
+CREATE TABLE `id`.`videojuegos` (
   `id_videojuegos` int NOT NULL AUTO_INCREMENT,
   `titulo` varchar(45) COLLATE utf8mb4_general_ci NOT NULL,
   `categoria` varchar(45) COLLATE utf8mb4_general_ci NOT NULL,
