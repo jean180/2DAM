@@ -21,7 +21,11 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< HEAD
   <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_28" />
+=======
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_28" />
+>>>>>>> 45b97d96ae5174cad98c6652a0e93206a55052fb
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -50,7 +54,11 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/app/src/main/res/drawable" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../FragmentsUso" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../RadioButton_I" />
+>>>>>>> 45b97d96ae5174cad98c6652a0e93206a55052fb
   </component>
   <component name="RecentsManager">
     <key name="android.template.1972968866">
@@ -134,15 +142,24 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+<<<<<<< HEAD
     <state x="740" y="304" width="424" height="484" key="FileChooserDialogImpl" timestamp="1607585311811">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1160@0.0.1920.1040" timestamp="1605629065303" />
     <state x="740" y="304" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1607585311811" />
+=======
+    <state x="-1180" y="306" key="FileChooserDialogImpl" timestamp="1605893699111">
+      <screen x="-1920" y="0" width="1920" height="1160" />
+    </state>
+    <state x="-1180" y="306" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1160@-1920.0.1920.1160" timestamp="1605893699111" />
+    <state x="740" y="274" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1160@0.0.1920.1040" timestamp="1605809045762" />
+>>>>>>> 45b97d96ae5174cad98c6652a0e93206a55052fb
     <state x="732" y="332" width="446" height="440" key="chooseDestDirectoryDialog" timestamp="1600849939388">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="732" y="332" width="446" height="440" key="chooseDestDirectoryDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1600849939388" />
+<<<<<<< HEAD
     <state x="100" y="125" width="1720" height="855" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1607584656011">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -151,5 +168,12 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="1091" y="381" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1607584593413" />
+=======
+    <state x="1091" y="350" key="com.intellij.ide.util.TipDialog" timestamp="1605808973130">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1091" y="350" key="com.intellij.ide.util.TipDialog/0.0.1920.1040/-1920.0.1920.1160@0.0.1920.1040" timestamp="1605808973130" />
+    <state x="1091" y="381" key="com.intellij.ide.util.TipDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1601878454719" />
+>>>>>>> 45b97d96ae5174cad98c6652a0e93206a55052fb
   </component>
 </project>

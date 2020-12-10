@@ -38,7 +38,7 @@ public class Frame extends JFrame {
 
     public static void anydefFilarDeDatos(DefaultTableModel modelo) {
         try {
-            String urlOdbc = "jdbc:mysql://localhost:3306/di?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
+            String urlOdbc = "jdbc:mysql://localhost:3306/id?useSSL=false&useTimezone=true&serverTimezone=UTC&allowPublicKeyRetrieval=true";
             Connection con = (java.sql.DriverManager.getConnection(urlOdbc, "root", "123456"));
             Statement s = con.createStatement();
             ResultSet rs = s.executeQuery("SELECT * FROM clients");
