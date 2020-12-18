@@ -12,7 +12,7 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="Pixel_2_API_28" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="Nexus_5X_API_28" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -25,7 +25,11 @@
       </state>
     </system>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
   <component name="ProjectId" id="1htvaH7kOsCutkfxNRNgn1Q6PMQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -34,7 +38,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Android/Sdk" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../HolaMundo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Holamundo2" />
   </component>
   <component name="RunManager">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
@@ -110,9 +114,10 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl" timestamp="1600843401708">
-      <screen x="0" y="27" width="1920" height="1053" />
+    <state x="-1177" y="320" width="424" height="484" key="FileChooserDialogImpl" timestamp="1608305531477">
+      <screen x="-1920" y="8" width="1920" height="1160" />
     </state>
+    <state x="-1177" y="320" key="FileChooserDialogImpl/0.0.1920.1040/-1920.8.1920.1160@-1920.8.1920.1160" timestamp="1608305531477" />
     <state x="743" y="310" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1600843401708" />
     <state x="115" y="51" width="1720" height="855" key="com.android.tools.idea.avdmanager.AvdListDialog" timestamp="1600845844047">
       <screen x="0" y="27" width="1920" height="1053" />
