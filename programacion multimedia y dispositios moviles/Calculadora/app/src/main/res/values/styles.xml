@@ -8,7 +8,7 @@
     </style>
 
     <style name="AppTheme.Botones" parent="TextAppearance.AppCompat.Headline">
-        <item name="android:textSize">15dp</item>
+        <item name="android:textSize">20dp</item>
         <item name="android:gravity">center</item>
         <item name="android:padding">1sp</item>
         <item name="android:layout_margin">1dp</item>

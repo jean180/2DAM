@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">Calculadora</string>
     <string name="bnt_C">C</string>
+    <string name="bnt_Borrar">&lt;--</string>
     <string name="bnt_Dividir">/</string>
     <string name="bnt_Multiplicar">X</string>
     <string name="bnt_Resta">-</string>

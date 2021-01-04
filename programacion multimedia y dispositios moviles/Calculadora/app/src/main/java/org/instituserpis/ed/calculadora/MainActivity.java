@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         final TextView tvNumero = (TextView) findViewById(R.id.tv_numero);
         tvNumero.setText("0");
         final Button BtnC = (Button) findViewById(R.id.BtnC);
+        final Button BtnBorrar = (Button) findViewById(R.id.BtnBorrar);
         final Button BtnDividir = (Button) findViewById(R.id.BtnDividir);
         final Button BtnMultiplicar = (Button) findViewById(R.id.BtnMultiplicar);
         final Button BtnResta = (Button) findViewById(R.id.BtnResta);
@@ -43,6 +44,14 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 tvNumero.setText("0");
+            }
+        });
+
+        BtnBorrar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String pantalla = tvNumero.getText().toString();
+                tvNumero.setText(pantalla.substring(0, pantalla.length()-1));
             }
         });
 

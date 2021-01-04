@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:layout_alignParentTop="true"
     android:background="@color/colorBlack"
-    android:gravity="bottom"
     tools:context=".MainActivity">
 
     <!-- TextView de los numeros -->
@@ -36,9 +35,16 @@
             style="@style/AppTheme.Botones.Grey1"
             android:layout_row="0"
             android:layout_column="0"
-            android:layout_columnSpan="3"
+            android:layout_columnSpan="2"
             android:layout_gravity="fill_horizontal"
             android:text="@string/bnt_C" />
+
+        <Button
+            android:id="@+id/BtnBorrar"
+            style="@style/AppTheme.Botones.Grey1"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:text="@string/bnt_Borrar"/>
 
         <Button
             android:id="@+id/BtnDividir"
