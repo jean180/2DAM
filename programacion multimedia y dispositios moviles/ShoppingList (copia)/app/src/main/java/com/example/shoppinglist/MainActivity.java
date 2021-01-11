@@ -2,22 +2,19 @@ package com.example.shoppinglist;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
     private ShoppingListViewModel mViewModel;
-    private RecyclerView mList;
-    private ShoppingListAdapter mAdapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        TextView dbText = findViewById(R.id.db_text);
 
         ViewModelProvider.AndroidViewModelFactory factory =
                 ViewModelProvider.AndroidViewModelFactory.getInstance(getApplication());
@@ -25,25 +22,12 @@ public class MainActivity extends AppCompatActivity {
         mViewModel = new ViewModelProvider(this, factory)
                 .get(ShoppingListViewModel.class);
 
-        setupList();
-
-        //setupFab();
+        mViewModel.getShoppingLists().observe(this, shoppingLists -> {
+            StringBuilder sb = new StringBuilder();
+            for (ShoppingList list : shoppingLists){
+                sb.append(list.getName()).append("\n");
+            }
+            dbText.setText(sb.toString());
+        });
     }
-
-    private void setupList() {
-        mList = findViewById(R.id.list);
-        mAdapter = new ShoppingListAdapter();
-        mList.setAdapter(mAdapter);
-        mViewModel.getShoppingLists().observe(this, mAdapter::setItems);
-    }
-
-    /*
-    private void setupFab() {
-        findViewById(R.id.floating_action_button)
-                .setOnClickListener(view -> addNewShoppingList());
-    }
-
-    private void addNewShoppingList() {
-        startActivity(new Intent(this, AddShoppingListActivity.class));
-    }*/
 }

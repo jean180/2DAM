@@ -12,8 +12,6 @@ android {
         versionName "1.0"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-
-        vectorDrawables.useSupportLibrary = true
     }
 
     buildTypes {
@@ -58,4 +56,3 @@ dependencies {
     androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
 
 }
-
