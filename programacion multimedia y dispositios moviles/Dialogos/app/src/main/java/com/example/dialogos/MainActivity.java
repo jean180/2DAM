@@ -17,8 +17,8 @@ public class MainActivity extends FragmentActivity implements BlankFragment.OnSe
         setContentView(R.layout.activity_main);
 
         boton = (Button)findViewById(R.id.boton);
-        resultado = (TextView)findViewById(R.id.resultado)
-        boton.setOnClickListener(new BlankFragment().show(getSupportFragmentManager(), "BlankFragment"););
+        resultado = (TextView)findViewById(R.id.resultado);
+        boton.setOnClickListener(new BlankFragment().show(getSupportFragmentManager(), "BlankFragment"));
 
     }
 
