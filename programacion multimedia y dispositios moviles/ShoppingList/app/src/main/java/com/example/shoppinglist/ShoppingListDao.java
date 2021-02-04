@@ -15,4 +15,13 @@ public interface ShoppingListDao {
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     void insert(ShoppingList shoppingList);
+
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
+    void insertShoppingLists(List<ShoppingList> lists);
+
+    @Query("SELECT * FROM shopping_list WHERE id = :id LIMIT 1")
+    LiveData<ShoppingList> getSgoppingList(String id);
+
+    @Query("SELECT * FROM shopping_list WHERE category IN(:categories)")
+    LiveData<List<ShoppingList>> getShoppingListsByCategories(List<String> categories);
 }

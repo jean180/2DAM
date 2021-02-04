@@ -1,6 +1,7 @@
 package com.example.shoppinglist;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
@@ -17,9 +18,22 @@ public class ShoppingList {
     @ColumnInfo(name = "name")
     private final String mName;
 
-    public ShoppingList(@NonNull String id, @NonNull String name){
+    @Nullable
+    @ColumnInfo(name = "category")
+    private final String mCategory;
+
+    @ColumnInfo(name = "created_date", defaultValue = "CURRENT_TIMESTAMP")
+    private final String mCreatedDate;
+
+    @ColumnInfo(name = "last_updated", defaultValue = "CURRENT_TIMESTAMP")
+    private final String mLastUpdated;
+
+    public ShoppingList(@NonNull String id, @NonNull String name, @Nullable String category, String createdDate, String lastUpdate){
         mId = id;
         mName = name;
+        mCategory = category;
+        mCreatedDate = createdDate;
+        mLastUpdated = lastUpdate;
     }
 
     public String getName() {

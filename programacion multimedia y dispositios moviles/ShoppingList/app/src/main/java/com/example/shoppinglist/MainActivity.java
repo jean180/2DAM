@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
         setupList();
 
-        //setupFab();
+        setupFab();
     }
 
     private void setupList() {
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         mViewModel.getShoppingLists().observe(this, mAdapter::setItems);
     }
 
-    /*
+
     private void setupFab() {
         findViewById(R.id.floating_action_button)
                 .setOnClickListener(view -> addNewShoppingList());
@@ -45,5 +45,5 @@ public class MainActivity extends AppCompatActivity {
 
     private void addNewShoppingList() {
         startActivity(new Intent(this, AddShoppingListActivity.class));
-    }*/
+    }
 }

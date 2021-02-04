@@ -8,10 +8,13 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {ShoppingList.class}, version = 1, exportSchema = false)
+@Database(entities = {ShoppingList.class}, version = 2, exportSchema = false)
 public abstract class ShoppingListDatabase extends RoomDatabase {
 
     // Exposición de DAOs
@@ -49,11 +52,13 @@ public abstract class ShoppingListDatabase extends RoomDatabase {
             dbExecutor.execute(() -> {
                 ShoppingListDao dao = INSTANCE.shoppingListDao();
 
-                ShoppingList list1 = new ShoppingList("1", "Lista de ejemplo");
-                ShoppingList list2 = new ShoppingList("2", "Banquete de Navidad");
+                List<ShoppingList> lists = new ArrayList<>();
+                for (int i = 0; i < 5; i++) {
+                    String id = UUID.randomUUID().toString();
+                    lists.add(new ShoppingList(id, "Lista " + (i+1)));
+                }
 
-                dao.insert(list1);
-                dao.insert(list2);
+                dao.insertShoppingLists(lists);
             });
         }
     };
