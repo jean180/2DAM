@@ -1,3 +1,6 @@
+import java.util.*;
+import java.net.*;
+import java.io.*;
 
 public class DatagramSocketClient {
 	
@@ -30,26 +33,31 @@ public class DatagramSocketClient {
 			//creació del paquet per rebre les dades
 			packet = new DatagramPacket(receivedData, 1024);
 
-			//espera de les dades
-			socket.receive(packet);
+			//espera de les dades, maximo 5 segundos
+			socket.setSoTimeout(5000);
+			try{
+				socket.receive(packet);
 			
-			//processament de les dades rebudes i obtenció de la resposta
-			sendingData = getDataToRequest(packet.getData(), packet.getLength());
+				//processament de les dades rebudes i obtenció de la resposta
+				sendingData = getDataToRequest(packet.getData(), packet.getLength());
+			}catch(SocketTimeoutException e){
+			}
 		}
 	}
 
+
 	private byte[] getDataToRequest(byte[] data, int length) {
 		//procés diferent per cada aplicació
-
+		return data;
 	}
 
 	private byte[] getFirstRequest() {
 		//procés diferent per cada aplicació
-
+		return new byte[1024];
 	}
 
 	private boolean mustContinue(byte[] sendingData) {
 		//procés diferent per cada aplicació
-
+		return true;
 	}
 }

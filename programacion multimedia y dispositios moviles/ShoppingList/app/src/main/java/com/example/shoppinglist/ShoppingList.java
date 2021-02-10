@@ -22,18 +22,22 @@ public class ShoppingList {
     @ColumnInfo(name = "category")
     private final String mCategory;
 
+    @ColumnInfo(name = "is_favorite", defaultValue = "0")
+    private  final  boolean mFavorite;
+
     @ColumnInfo(name = "created_date", defaultValue = "CURRENT_TIMESTAMP")
     private final String mCreatedDate;
 
     @ColumnInfo(name = "last_updated", defaultValue = "CURRENT_TIMESTAMP")
     private final String mLastUpdated;
 
-    public ShoppingList(@NonNull String id, @NonNull String name, @Nullable String category, String createdDate, String lastUpdate){
+    public ShoppingList(@NonNull String id, @NonNull String name, @Nullable String category, boolean favorite, String createdDate, String lastUpdated){
         mId = id;
         mName = name;
         mCategory = category;
+        mFavorite = favorite;
         mCreatedDate = createdDate;
-        mLastUpdated = lastUpdate;
+        mLastUpdated = lastUpdated;
     }
 
     public String getName() {
@@ -42,5 +46,22 @@ public class ShoppingList {
 
     public String getId() {
         return mId;
+    }
+
+    @Nullable
+    public String getmCategory() {
+        return mCategory;
+    }
+
+    public String getmCreatedDate() {
+        return mCreatedDate;
+    }
+
+    public String getmLastUpdated() {
+        return mLastUpdated;
+    }
+
+    public boolean isFavorite() {
+        return mFavorite;
     }
 }

@@ -14,7 +14,7 @@ import java.util.UUID;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {ShoppingList.class}, version = 2, exportSchema = false)
+@Database(entities = {ShoppingList.class}, version = 3, exportSchema = false)
 public abstract class ShoppingListDatabase extends RoomDatabase {
 
     // Exposición de DAOs
@@ -36,12 +36,14 @@ public abstract class ShoppingListDatabase extends RoomDatabase {
                             context.getApplicationContext(),ShoppingListDatabase.class,
                             DATABASE_NAME)
                             .addCallback(mRoomCallback)
+                            .fallbackToDestructiveMigration()
                             .build();
                 }
             }
         }
         return INSTANCE;
     }
+
 
     // Prepoblar base de datos con callback
     private static final RoomDatabase.Callback mRoomCallback = new Callback() {
@@ -52,10 +54,15 @@ public abstract class ShoppingListDatabase extends RoomDatabase {
             dbExecutor.execute(() -> {
                 ShoppingListDao dao = INSTANCE.shoppingListDao();
 
-                List<ShoppingList> lists = new ArrayList<>();
+                List<ShoppingListInsert> lists = new ArrayList<>();
                 for (int i = 0; i < 5; i++) {
-                    String id = UUID.randomUUID().toString();
-                    lists.add(new ShoppingList(id, "Lista " + (i+1)));
+
+                    ShoppingListInsert data = new ShoppingListInsert(
+                            String.valueOf((i+1)),
+                            "Lista " + (i + 1)
+                    );
+
+                    lists.add(data);
                 }
 
                 dao.insertShoppingLists(lists);

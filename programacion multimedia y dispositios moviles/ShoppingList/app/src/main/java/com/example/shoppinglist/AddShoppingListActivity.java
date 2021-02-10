@@ -38,7 +38,7 @@ public class AddShoppingListActivity extends AppCompatActivity {
 
                     //crear entidad y guardarla
                     String id = UUID.randomUUID().toString();
-                    ShoppingList shoppingList = new ShoppingList(id, name);
+                    ShoppingListInsert shoppingList = new ShoppingListInsert(id, name);
                     vm.insert(shoppingList);
 
                     //Ir a la lista
