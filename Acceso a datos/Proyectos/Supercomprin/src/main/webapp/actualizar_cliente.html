@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>ACTUALIZAR CLIENTE</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+            function comprobar() {
+                if (document.getElementById("DNI").value == "" || document.getElementById("nombre").value == "" || document.getElementById("apellidos").value == ""|| document.getElementById("mail").value == ""|| document.getElementById("fecha_nacimiento").value == "") {
+                    alert("Rellene los campos adecuadamente");
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="Controller?op=doUpdate_cliente" method="post" onsubmit="return comprobar();">
+            <br>
+            <center>ACTUALIZAR CLIENTE</center>
+            <br>
+            <center>ID: <input id="id_cliente" type="text" name="id_cliente" size="10"/></center>
+            <br>
+            <center>DNI: <input id="DNI" type="text" name="DNI" size="10"/></center>
+            <br>
+            <center>Nombre: <input id="nombre" type="text" name="nombre" size="20"/></center>
+            <br>
+            <center>Apellidos: <input id="apellidos" type="text" name="apellidos" size="30"/></center>
+            <br>
+            <center>Mail: <input id="mail" type="text" name="mail" size="20"/></center>
+            <br>
+            <center>Fecha de nacimiento: <input id="fecha_nacimiento" type="text" name="fecha" size="20" placeholder="(yyyy-mm-dd)"/></center>
+            <center><button>Guardar</button></center>
+        </form>
+    </body>
+</html>

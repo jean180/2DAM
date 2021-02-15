@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>NUEVA DEVOLUCION</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+            function comprobar(){
+                if (document.getElementById("Id_compra").value == "") {
+                    alert("Rellene los campos adecuadamente");
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <form action="Controller?op=doAlta_devolucion" method="post" onsubmit="return comprobar();">
+            <br>
+            <center>DEVOLUCION DE COMPRA</center>
+            <br>
+            <center>ID Compra: <input id="Id_compra" type="text" name="Id_compra" size="9"/></center>
+            <br>
+            <center><button>Devolver</button></center>
+        </form>
+    </body>
+</html>

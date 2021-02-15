@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>NUEVO PRODUCTO</title>
+        <meta charset="UTF-8">
+        <script type="text/javascript">
+            function comprobar() {
+                if (document.getElementById("id_producto").value == "" || document.getElementById("nombre").value == "" ||  document.getElementById("puntos").value == "" || document.getElementById("precio").value == "") {
+                    alert("Rellene los campos adecuadamente");
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+            
+        </script>
+    </head>
+    <body>
+        <form action="Controller?op=doAlta_producto" method="post" onsubmit="return comprobar();">
+            <br>
+            <center>NUEVO PRODUCTO</center>
+            <br>
+            <center>Nombre: <input id="nombre" type="text" name="nombre" size="20"/></center>
+            <br>
+            <center>puntos <input id="puntos" type="text" name="puntos" size="30"/></center>
+            <br>
+            <center>precio <input id="precio" type="text" name="precio" size="20"/></center>
+            <br>
+            <center><button>Guardar</button></center>
+        </form>
+    </body>
+</html>
