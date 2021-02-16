@@ -25,8 +25,41 @@ let videojuegosSchema = new mongoose.Schema({
         required: true,
         minlength: 1,
         trim: true
+    },
+    pegi: {
+        type: String,
+        required: true,
+        minlength: 1,
+        trim: true
     }
 });
 
 //modelo
 let Videojuego = mongoose.model('videogames', videojuegosSchema);
+
+//busqueda con find
+let p1 = Videojuego.find().then(resultado => {
+    MostrarTodo();
+}).catch(error => {
+    console.log("ERROR en find");
+});
+
+function MostrarTodo() {
+    Videojuego.find().then(resultado => {
+        let cadenaDOM = "";
+        resultado.forEach(videogame => {
+            cadenaDOM +=
+                `<div>
+                    <x-box vertical>
+                        <img src="./images/${videogame.img}" height="170" width="108">
+                        <x-label><strong>${videogame.title}</strong></x-label>
+                        <x-label>${videogame.category}</x-label>
+                        <x-label>${videogame.pegi}</x-label>
+                    </x-box>
+                </div>`;
+        });
+        document.getElementById("wrapper").innerHTML = cadenaDOM;
+    }).catch(error => {
+        console.log("ERROR en find");
+    });
+}
