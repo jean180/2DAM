@@ -1,21 +1,9 @@
-html {
-  background-color: #878d96;
-}
-.wrapper {
-    border: 2px solid #5c5a5a;
-    border-radius: 5px;
-    background-color: #878d96;
-}
 
-.wrapper > div {
-    border: 2px solid #8a8585;
-    border-radius: 5px;
-    background-color: #ffffff;
-    padding: 1em;
-    color: #0e0d0d;
-}
-.wrapper {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  
+.cargando {
+  width: 200px;
+  height: 100px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: auto;
+  margin-right: auto;
 }

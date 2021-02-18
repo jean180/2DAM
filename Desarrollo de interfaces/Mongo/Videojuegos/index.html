@@ -6,16 +6,34 @@
     <title>Videojuegos</title>
     <link rel="stylesheet" href="./css/estilos.css">
     <link rel="stylesheet" href="./css/photon.css">
+    <link rel="stylesheet" href="node_modules/xel/themes/material.css">
     <script src="./node_modules/xel/xel.min.js"></script>
 </head>
 
 <body>
 
+    <header class="toolbar toolbar-header">
+        <div class="toolbar-actions">
+            <div class="btn-group">
+                <button class="btn btn-default" id="btnTodos">
+                    <x-icon name="home"></x-icon>
+                </button>
+                <button class="btn btn-default" id="btnAdd">
+                    <x-icon name="add"></x-icon>
+                </button>
+                <button class="btn btn-default" id="btnRemove">
+                    <x-icon name="remove"></x-icon>
+                </button>
+            </div>
+        </div>
+    </header>
 
     <!--panel imágenes-->
-    <div class="wrapper" id="wrapper">
+    <x-throbber class="cargando" id="cargando"></x-throbber>
+    <x-card id="wrapper" style="display: none;">
 
-    </div>
+    </x-card>
+    
 
 
     <script>require('./app.js')</script>

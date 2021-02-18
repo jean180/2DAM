@@ -49,15 +49,22 @@ function MostrarTodo() {
         let cadenaDOM = "";
         resultado.forEach(videogame => {
             cadenaDOM +=
-                `<div>
-                    <x-box vertical>
-                        <img src="./images/${videogame.img}" height="170" width="108">
-                        <x-label><strong>${videogame.title}</strong></x-label>
-                        <x-label>${videogame.category}</x-label>
-                        <x-label>${videogame.pegi}</x-label>
-                    </x-box>
-                </div>`;
+                `<x-accordion>
+                        <header>
+                            <x-label style="width: 100px;">
+                            <strong>${videogame.title}</strong>
+                            </x-label>
+                            <x-label>${videogame.category}</x-label>
+                        </header>
+                        <main><p>
+                            <x-label><img src="./images/${videogame.img}" height="170" width="108"></x-label>
+                            <x-label>+${videogame.pegi}</x-label></p>
+                        </main>
+                    </x-accordion>
+                    <hr>`;
         });
+        document.getElementById("cargando").style.display = "none";
+        document.getElementById("wrapper").style.display = "block";
         document.getElementById("wrapper").innerHTML = cadenaDOM;
     }).catch(error => {
         console.log("ERROR en find");
