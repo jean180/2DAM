@@ -19,7 +19,9 @@ import java.util.List;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Database(entities = {Alumno.class, Asignatura.class}, version = 1, exportSchema = false)
+@Database(entities = {
+        Alumno.class,
+        Asignatura.class}, version = 1, exportSchema = false)
 public abstract class MatriculaDatabase extends RoomDatabase {
 
     //Exposición de DAOs
