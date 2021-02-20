@@ -42,7 +42,23 @@ public class AltaAction_compra extends HttpServlet {
         producto pro = gestion_pro.find_productos(id_producto);
         GestionClientes gestion_cli = new GestionClientes();
         cliente cl = gestion_cli.find_cliente(id_cliente);
-        if (cl.getSaldo() - pro.getPrecio() <= 0) {
+        if (!gestion_cli.buscar_cliente(id_cliente)) {
+            response.setContentType("text/html");
+            PrintWriter pw = response.getWriter();
+            pw.println("<script type=\"text/javascript\">");
+            pw.println("alert('la id del cliente no existe en la base de datos');");
+            pw.println("</script>");
+            RequestDispatcher rd = request.getRequestDispatcher("nueva_compra.html");
+            rd.include(request, response);
+        } else if (!gestion_pro.buscar_producto(id_producto)) {
+            response.setContentType("text/html");
+            PrintWriter pw = response.getWriter();
+            pw.println("<script type=\"text/javascript\">");
+            pw.println("alert('la id del producto no existe en la base de datos');");
+            pw.println("</script>");
+            RequestDispatcher rd = request.getRequestDispatcher("nueva_compra.html");
+            rd.include(request, response);
+        }else if (cl.getSaldo() - pro.getPrecio() <= 0) {
             response.setContentType("text/html");
             PrintWriter pw = response.getWriter();
             pw.println("<script type=\"text/javascript\">");

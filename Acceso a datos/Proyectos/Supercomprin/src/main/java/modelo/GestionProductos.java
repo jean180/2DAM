@@ -81,4 +81,28 @@ public class GestionProductos {
         return c;
         
     }
+     public boolean buscar_producto(int id_producto) {
+        boolean encontrado = false;
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("SupercomprinPU");
+        EntityManager em = emf.createEntityManager();
+        EntityTransaction tx = em.getTransaction();
+        
+        //Comienzo de transacción
+        tx.begin();
+        producto c = em.find(producto.class, id_producto);
+        
+        //Si encontramos el cliente
+        if (c!=null) {
+            encontrado = true;
+        }
+        
+        //Acabamos transacción
+        tx.commit();
+        
+        //Cerramos EntityManager
+        em.close();
+        
+        return encontrado;
+        
+    }
 }
